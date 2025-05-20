@@ -1,3 +1,4 @@
+/* Reset & Base Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,97 +6,136 @@
 }
 
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
-  color: #2c3e50;
-  padding: 40px 20px;
+  font-family: 'Chakra Petch', sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('https://images.pexels.com/photos/764998/pexels-photo-764998.jpeg') center/cover no-repeat;
+  color: #f4f4f4;
   line-height: 1.8;
+  padding: 40px 20px;
+  min-height: 100vh;
 }
 
 /* Container */
 .container {
-  max-width: 900px;
+  max-width: 960px;
   margin: auto;
-  background: white;
+  background: rgba(0, 0, 0, 0.7);
   padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-out;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* Headings */
-h1 {
-  font-size: 3rem;
-  margin-bottom: 0.3em;
-  color: #34495e;
+/* Header */
+header {
   text-align: center;
+  margin-bottom: 2em;
 }
 
-h2 {
+header h1 {
+  font-family: 'Rubik Glitch', cursive;
+  font-size: 3.5rem;
+  color: #ffcc70;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-top: 0.5rem;
+}
+
+/* Hero Image Placeholder */
+.hero {
+  height: 240px;
+  background: url('https://images.pexels.com/photos/764998/pexels-photo-764998.jpeg') center/cover no-repeat;
+  border-radius: 16px;
+  margin-bottom: 2em;
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.4);
+}
+
+/* Section Headings */
+section h2 {
   font-size: 2rem;
-  margin-top: 2em;
-  margin-bottom: 0.5em;
-  color: #2c3e50;
+  color: #ffd479;
+  margin-bottom: 1em;
 }
 
 /* Paragraphs */
-p {
+section p {
   margin-bottom: 1em;
   font-size: 1.1rem;
+  color: #f0f0f0;
 }
 
-/* Image Styling */
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 1.5em auto;
+/* Stats Grid */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ffcc70;
+  padding: 1.2em;
+  text-align: center;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* List Styling */
-ul {
+.stat-card h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #ffcc70;
+}
+
+.stat-card p {
+  margin-top: 0.4em;
+  font-size: 1rem;
+  color: #eee;
+}
+
+/* Quote Slider */
+.quote-slider {
+  margin-top: 1em;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 2;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 1.2em;
+  border-left: 5px solid #ffcc70;
+  border-radius: 10px;
+  color: #f9f9f9;
+}
+
+/* Timeline */
+.timeline {
+  list-style-type: "🦆 ";
   padding-left: 1.5em;
   font-size: 1.05rem;
+  color: #eee;
 }
 
-li {
-  margin-bottom: 0.5em;
-}
-
-/* Blockquote */
-blockquote {
-  font-style: italic;
-  background: #ecf0f1;
-  padding: 1em;
-  margin: 2em 0;
-  border-left: 5px solid #3498db;
-  border-radius: 8px;
+.timeline li {
+  margin-bottom: 0.6em;
 }
 
 /* Footer */
-footer {
+.footer {
   margin-top: 3em;
   text-align: center;
   font-size: 0.95rem;
-  color: #7f8c8d;
+  color: #aaa;
+  border-top: 1px solid #444;
+  padding-top: 1.5em;
 }
 
-/* Heart emoji */
-footer span {
-  color: #e74c3c;
-  font-size: 1.2rem;
-}
-
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+/* Responsive Fixes */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .stat-card h3 {
+    font-size: 1.4rem;
   }
 }
