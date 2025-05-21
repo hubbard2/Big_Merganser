@@ -18,7 +18,8 @@ body {
 /* Container */
 .container {
   max-width: 960px;
-  margin: auto;
+  margin: 0 auto;
+  padding-top: 0;
   background: rgba(0, 0, 0, 0.7);
   padding: 40px;
   border-radius: 20px;
